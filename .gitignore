@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+.env*.local
+.vercel
+*.tsbuildinfo
+.DS_Store
+
+# Dev artifacts (not needed for the deployed site)
+temporary screenshots/
+probe-*.mjs
+
+# Source-only folders (originals; published copies live in public/)
+brand_assets/
+Images of Tash/
+references/
