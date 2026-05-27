@@ -95,7 +95,7 @@ function SpecialtyCard({
     "--card-rule": item.rule,
     scale,
     top: `${i * 32}px`,
-  } as React.CSSProperties;
+  } as unknown as React.CSSProperties;
 
   return (
     <div className="h-screen sticky top-32 flex items-start justify-center px-4 md:px-8">

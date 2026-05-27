@@ -596,3 +596,143 @@ body {
   color: var(--mist);
 }
 
+/* ------------------------------------------------------------------ */
+/* Essay body — long-form prose styles for blog post bodies on the    */
+/* midnight surface. Single column, generous leading, dot-and-rule    */
+/* accents on blockquotes, numbered lists in italic display.          */
+/* ------------------------------------------------------------------ */
+.essay-body {
+  color: rgba(245, 245, 245, 0.88);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.78;
+  max-width: 65ch;
+}
+.essay-body > * + * {
+  margin-top: 1.35em;
+}
+.essay-body p {
+  font-size: 18px;
+  line-height: 1.78;
+}
+.essay-body p > strong {
+  color: var(--mist);
+  font-weight: 600;
+}
+.essay-body p > em {
+  color: rgba(245, 245, 245, 0.95);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  font-size: 1.06em;
+}
+.essay-body h2 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--mist);
+  margin-top: 2.4em;
+  margin-bottom: -0.2em;
+}
+.essay-body h2::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--bloom);
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+.essay-body h3 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--mist);
+  margin-top: 2em;
+}
+.essay-body a {
+  color: var(--bloom);
+  text-decoration: underline;
+  text-decoration-color: rgba(254, 176, 160, 0.4);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 220ms ease;
+}
+.essay-body a:hover {
+  text-decoration-color: var(--bloom);
+}
+.essay-body blockquote {
+  margin: 2.2em 0;
+  padding: 0.5em 0 0.5em 1.4em;
+  border-left: 2px solid var(--bloom);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: var(--mist);
+}
+.essay-body ol,
+.essay-body ul {
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 1.78;
+}
+.essay-body ol {
+  list-style: none;
+  counter-reset: essay-counter;
+}
+.essay-body ol > li {
+  position: relative;
+  padding-left: 2.6em;
+  counter-increment: essay-counter;
+  margin-top: 0.6em;
+}
+.essay-body ol > li::before {
+  content: counter(essay-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--bloom);
+  letter-spacing: 0.04em;
+}
+.essay-body ul {
+  list-style: none;
+}
+.essay-body ul > li {
+  position: relative;
+  padding-left: 1.6em;
+  margin-top: 0.5em;
+}
+.essay-body ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.85em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--bloom);
+}
+.essay-body hr {
+  border: 0;
+  margin: 2.6em auto;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(245, 245, 245, 0.25) 50%,
+    transparent 100%
+  );
+}
+.essay-body img {
+  border-radius: 12px;
+  margin: 2em 0;
+}
+
